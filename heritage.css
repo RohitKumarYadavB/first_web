@@ -1,0 +1,92 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    border-spacing: border-box;
+    }
+    body{
+        background-color: aqua;
+    }
+    header{
+    
+    width: 100%;
+    background-color: rgb(126, 126, 206);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    }
+    a{
+    text-decoration: none;
+    color: rgb(15, 19, 17);
+    font-size: 20px;
+    }
+    #logo{
+    height: 50px;
+    width: 50px;
+    border: 2px solid black;
+    border-radius: 25px;
+    }
+    h1{
+    font-size: 50px;
+    font-style: bold;
+    text-align: center;
+    color:red;
+    }
+    button{
+    background-color:pink;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    }
+    button:hover{
+    background-color: brown;
+    }
+    #box1{
+    display: flex;
+    margin: 10px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+    }
+    #box2{
+    display: flex;
+    margin: 10px;
+    padding-top: 50px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    }
+    #box3{
+    display: flex;
+    margin: 10px;
+    padding-top: 50px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    }
+    #box4{
+    display: flex;
+    margin: 10px;
+    padding-top: 50px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    }
+    #box5{
+    display: flex;
+    margin: 10px;
+    padding-top: 50px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    }
+    img{
+    height: 300px;
+    width: 400px;
+    border: 2px solid;
+    border-radius: 5px;
+    }
+    p{
+    text-decoration: underline;
+    text-align: center;
+    
+    font-size: 30px;
+    font-weight: bold;
+    }
