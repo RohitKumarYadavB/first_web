@@ -82,26 +82,35 @@ background-size: cover;
 <body>
 <?php
 $msg = "";
-$conn=mysqli_connect("localhost","root","","hotel booking");
-if($conn==false){
-die("Connection failed.". mysqli_connect_error());
+$conn = mysqli_connect("localhost", "root", "", "hotel booking");
+if ($conn == false) {
+    die("Connection failed." . mysqli_connect_error());
 }
-if(isset($_POST["submit"]))
-{
-$Firstname = $_POST["Firstname"];
-$Lastname = $_POST["Lastname"];
-$ContactNo=$_POST["ContactNo"];
-$Gender=$_POST["Gender"];
-$Emailid=$_POST["Emailid"];
-$Yourcountry=$_POST["Yourcountry"];
-$Yourstate=$_POST["Yourstate"];
-$Yourcity=$_POST["Yourcity"];
-$sql = "insert into booking
-values('$Firstname','$Lastname',$ContactNo,'$Gender','$Emailid','$Yourcountry','$Yourstate','$Yourcity')";
-$result=mysqli_query($conn,$sql);
-$msg = "<center><font color='black'>reservation submitted succesfully</font></center>";
+
+if (isset($_POST["submit"])) {
+    $Firstname = $_POST["Firstname"];
+    $Lastname = $_POST["Lastname"];
+    $ContactNo = $_POST["ContactNo"];
+    $Gender = $_POST["Gender"];
+    $Emailid = $_POST["Emailid"];
+    $Yourcountry = $_POST["Yourcountry"];
+    $Yourstate = $_POST["Yourstate"];
+    $Yourcity = $_POST["Yourcity"];
+    
+    // Include the column names explicitly
+    $sql = "INSERT INTO booking (Firstname, Lastname, ContactNo, Gender, Emailid, Yourcountry, Yourstate, Yourcity) 
+            VALUES ('$Firstname', '$Lastname', '$ContactNo', '$Gender', '$Emailid', '$Yourcountry', '$Yourstate', '$Yourcity')";
+    
+    $result = mysqli_query($conn, $sql);
+    
+    if ($result) {
+        $msg = "<center><font color='black'>Reservation submitted successfully</font></center>";
+    } else {
+        $msg = "<center><font color='red'>Error: " . mysqli_error($conn) . "</font></center>";
+    }
 }
 ?>
+
 </body>
 <form action="index.php" method="post">
 <div class="container">
